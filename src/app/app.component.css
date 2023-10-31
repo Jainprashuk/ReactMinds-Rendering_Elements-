@@ -1,0 +1,57 @@
+#menu-toggle {
+    display: none;
+}
+
+#menu-icon {
+    background: #333;
+    color: #fff;
+    display: inline-block;
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid #333;
+    border-radius: 4px;
+}
+
+#menu-icon svg {
+    width: 32px;
+    height: 32px;
+    fill: #fff;
+}
+
+#menu {
+    background: #333;
+    position: absolute;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    transition: 0.4s;
+}
+
+#menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+#menu li {
+    padding: 20px;
+    text-align: center;
+}
+
+#menu a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Add the styles for checking/unchecking the checkbox */
+#menu-toggle:checked + #menu-icon {
+    background: #333;
+}
+
+#menu-toggle:checked + #menu-icon + #menu {
+    left: 0;
+}
+
+#menu-toggle:checked + #menu-icon + #menu + ul {
+    display: block;
+}

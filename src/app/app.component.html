@@ -1,0 +1,56 @@
+<app-header></app-header>
+<div class="mt-10 mb-5">
+  .
+</div>
+
+<div class="container">
+  <div class="row px-8 py-2 bg-dark text-white">
+      <div class="col-md-6 my-auto ">
+         <a class="text-decoration-none"  href="https://react-minds-getting-started.vercel.app/"> <span > 
+          Home    
+      </span></a><span>  ></span> <a class="text-decoration-none" href="https://react-minds.vercel.app/docs"> <span> Docs </span></a><span>></span> <a href="" class="text-decoration-none"> <span> Rendering Element </span></a>
+      </div>
+      <div class="col-md-6 d-none d-md-flex justify-content-end align-items-center">
+         
+          <input type="checkbox" id="menu-toggle">
+  <label for="menu-toggle" id="menu-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+      </svg>
+  </label>
+  <nav id="menu" class="mt-10">
+      <ul>
+          <br><br><br><br>
+          <li><a [routerLink]="[{ outlets: { secondary: ['RenderingintodomComponent'] } }]">Rendering Element Into Dom ? </a></li>
+          <li><a [routerLink]="[{ outlets: { secondary: ['UpdatingelementComponent'] } }]">Updating the Renderd Element ?</a></li>
+          <li><a [routerLink]="[{ outlets: { secondary: ['nessecaryreactupdates'] } }]">React Only Updates What's Nessecary..</a></li>
+      </ul>
+  </nav>
+      </div>
+  </div>
+</div>
+
+
+<div class="bg-light mx-auto">
+  <div class="mx-4 py-3">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-2">
+          <div class="col-12 col-sm-8 col-md-3 mx-auto">
+              <div class="bg-white shadow p-4 rounded">
+                  <a class="text-decoration-none" [routerLink]="[{ outlets: { secondary: ['RenderingintodomComponent'] } }]"><p class="text-center">Rendering Element Into Dom ?</p><hr></a>
+                  <a class="text-decoration-none" [routerLink]="[{ outlets: { secondary: ['UpdatingelementComponent'] } }]"><p class="text-center">Updating Rendered Element ?</p><hr></a>
+                  <a class="text-decoration-none" [routerLink]="[{ outlets: { secondary: ['nessecaryreactupdates'] } }]"><p class="text-center">React only updates What's nessecary... </p><hr></a>
+     
+                  
+              </div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-9">
+              <div class="bg-white shadow p-4 rounded">
+                  <!-- main content -->
+                  <router-outlet name="secondary" ></router-outlet>
+                  
+
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

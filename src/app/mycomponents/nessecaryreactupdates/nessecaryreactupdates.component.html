@@ -1,0 +1,6 @@
+<h1 class="text-center">React Only Updates What’s Necessary</h1>
+<br>
+<p>React DOM compares the element and its children to the previous one, and only applies the DOM updates necessary to bring the DOM to the desired state.</p>
+<p>You can verify by inspecting the last example with the browser tools</p>
+<p>Even though we create an element describing the whole UI tree on every tick, only the text node whose contents have changed gets updated by React DOM.</p>
+<p>In our experience, thinking about how the UI should look at any given moment, rather than how to change it over time, eliminates a whole class of bugs.</p>
