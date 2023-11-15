@@ -1,0 +1,30 @@
+<div *ngIf="!quizCompleted">
+    <h2>{{ questions[currentQuestionIndex].question }}</h2>
+    <ul>
+      <li *ngFor="let option of questions[currentQuestionIndex].options">
+        <label>
+          <input
+            type="radio"
+            [value]="option"
+            [(ngModel)]="selectedOption"
+            (change)="selectOption(option)"
+          />
+          {{ option }}
+        </label>
+      </li>
+    </ul>
+    <button (click)="nextQuestion()">Next</button>
+  
+    <!-- Progress Bar -->
+    <div class="progress-bar">
+      <div class="progress" [style.width]="(currentQuestionIndex ) / questions.length * 100 + '%'">
+      </div>
+    </div>
+  </div>
+  
+  <!-- Quiz Completed Section -->
+  <div *ngIf="quizCompleted">
+    <h2>Quiz Completed!</h2>
+    <p>Your final score is: {{ score }}</p>
+  </div>
+  
